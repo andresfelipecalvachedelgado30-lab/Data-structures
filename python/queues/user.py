@@ -49,7 +49,9 @@ while True:
                         print("identification number already exists! \n try again:::")
                         count += 1
                         break
+
                     i+=1
+
                 if count == 0:
 
                     break
@@ -167,28 +169,33 @@ while True:
 
         case '3':
             os.system('clear')
-            print ("Search Users:::\n")
-            id_user=input("Enter identiofication number to search")
+            print("::: Search User :::")
+            id_user = input("Enter identification number to search: ")
+            
+            found = False
+            indices = []
             i = 0
             j = 0
-            while i < len (ids):
-                if id_user==ids[i]:
-                    j += 1
+            while i < len(ids):
+                if id_user== ids[i]:
+                    j+= 1
+                    break
                 i += 1
-            if j > 0 : 
-                print (f"Ident user: {ids [i]} ")
-                print (f"Fullname: {firtsnames [i]} {lastnames[i]} ")
-                print (f"mobile prone: {mobile_phones [i]} ")
-                print (f"email {emails [i]} ")
-                print (f"gender: { genders [i]} ")
-                print (f"age: {ages [i]} ")
-                print (f"salary: {salarys [i]} ")
-                print (f"mobile prone: {mobile_phones [i]} ")
-                print (f"created: {created_at [i]} ")
-
-                print ("Identification number not found")
-                
-                key=input("Press any key to back to main menu")
+            
+            if j>0:
+                os.system('clear')
+                print("::: User found :::")
+                print (f"ident.user: {ids[i]}")
+                print (f"fullname: {firtsnames[i]} {lastnames[i]}")
+                print (f"mobile phone: {mobile_phones[i]}")
+                print (f"email: {emails[i]}")
+                print (f"mobile gender: {genders[i]}")
+                print (f" age: {ages[i]}")
+                print (f"salary: {salarys[i]}")
+            else:
+                print("identification number not found.")
+            
+            any_key = input("\nPress any key to back to main menu")
                 
 
            
@@ -198,4 +205,4 @@ while True:
             any_key=input("bye bye. press any key... ")
             break
         case _ :
-            any_key=input("Invalid option. press any key to try again"
+            any_key=input("Invalid option. press any key to try again")
