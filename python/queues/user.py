@@ -194,6 +194,8 @@ while True:
                 print (f"salary: {salarys[i]}")
             else:
                 print("identification number not found.")
+
+                
             
             any_key = input("\nPress any key to back to main menu")
                 
